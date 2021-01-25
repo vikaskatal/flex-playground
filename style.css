@@ -1,0 +1,64 @@
+html{
+  font-size: 16px;
+}
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex: 1 0 auto;
+}
+
+.title-text{
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 1rem;
+  margin: 0;
+}
+
+
+.flex-container {
+  display: flex;
+  padding: 10px;
+  background-color: #f1f1f1;
+  transition: all .2s ease;
+  height: 300px;
+  overflow: auto;
+  
+}
+.flex-container > div {
+  background-color: lightgreen;
+  border: 3px solid green;
+  padding: 15px;
+  margin: 10px;
+  font-size: 20px;
+  color: green;
+}
+
+.properties{
+  display: flex;
+  overflow: auto;
+  padding: 10px 0;
+}
+
+.form-ele {
+  padding: 10px;
+  min-width: 200px;
+}
+
+.form-ele label{
+  font-size: 14px;
+  display: block;
+}
+.form-ele select, .form-ele input {
+  margin-top: 5px;
+  width: 100%;
+  padding: 5px 10px;
+}
