@@ -12,7 +12,9 @@ body{
 }
 
 main{
+  display: flex;
   flex: 1 0 auto;
+  padding-bottom: 20px;
 }
 
 .title-text{
@@ -21,50 +23,134 @@ main{
   padding: 1rem;
   margin: 0;
   font-weight: 700;
+  box-shadow: 0px 1px 4px 0px rgb(0 0 0 / 8%);
+  position: relative;
 }
 
 
-.flex-container {
+.playground-container {
   display: flex;
-  padding: 10px;
+  padding: 40px 10px 10px;
   background-color: #f1f1f1;
   transition: all .2s ease;
-  height: 300px;
+  height: 100%;
   overflow: auto;
   
 }
-.flex-container > div {
+.playground-container > div {
   background-color: lightgreen;
-  border: 3px solid green;
-  padding: 15px;
+  padding: 20px;
   margin: 10px;
-  font-size: 20px;
-  color: green;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  min-width: 60px;
+  border-radius: 6px;
 }
+
+.playground{
+  flex-grow: 1;
+  position: relative;
+  max-width: calc(100vw - 250px);
+}
+
+.playground__actions{
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px;
+  border-bottom: 1px solid #000;
+}
+
+.playground__actions button{
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 2px solid black;
+  font-weight: 700;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+.playground__actions button:hover{
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
+}
+/* Playground */
+
 
 .properties{
-  display: flex;
-  overflow: auto;
-  padding: 10px 0;
+  padding: 15px 15px 0 15px;
+  overflow-y: auto;
+  width: 250px;
 }
+/* Properties */
 
 .form-ele {
-  padding: 10px;
+  padding: 15px 0 0;
   min-width: 200px;
 }
 
 .form-ele label{
   font-size: 14px;
   display: block;
+  font-weight: 700;
 }
 .form-ele select, .form-ele input {
   margin-top: 5px;
   width: 100%;
-  padding: 5px 10px;
+  padding: 8px 10px;
+  border-radius: 3px;
 }
+/* Form Elements */
+
+
+.slider {
+  -webkit-appearance: none;
+  height: 4px;
+  border-radius: 3px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-right: 10px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all .2s ease;
+}
+/* slider End */
 
 @media screen and (min-width: 600px) {
   html{
     font-size: 16px;
   }
 }
+
+
+

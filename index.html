@@ -8,18 +8,23 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <p class="title-text">Flex Playground</p>
   <main>
-    <p class="title-text">Flex Playground</p>
-    <div id="flexRoot" class="flex-root"></div>
-  </main>
-  
-  <div>
-    <div class="form-ele">
-      <label>Number of flex children</label>
-      <input type="number" onchange="flexObj.changeChildrenCount(this.value)" id="inputChildNumbers" value="5"/>
+    <aside class="properties">
+      <!-- <div class="form-ele">
+        <label>Number of flex children</label>
+        <input type="number" onchange="flexObj.changeChildrenCount(this.value)" id="inputChildNumbers" value="2"/>
+      </div> -->
+      <div id="properties"></div>
+    </aside>
+    <div class="playground">
+      <div class="playground__actions">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <button onclick="flexObj.addFlexChild()">Add Flex item</button>
+      </div>
+      <div id="flexPlayground"></div>
     </div>
-    <div id="properties" class="properties"></div>
-  </div>
+  </main>
 </body>
 
 <script>
